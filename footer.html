@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Footer Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Makes the body fill the entire viewport height */
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      flex: 1; /* Pushes the footer to the bottom if the content is short */
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #eaf7ea;
+      color: #1b5e20;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 0.9em;
+    }
+
+    .footer-tech p {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .footer-tech-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+
+    .footer-copyright {
+      border-top: 1px solid #c8e6c9;
+      padding-top: 10px;
+      margin-top: 10px;
+      font-size: 0.8em;
+      color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Main content goes here -->
+    <h1>Welcome to AyurHerb</h1>
+    <p>This is the main content area of the page.</p>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">ayurherb</div>
+
+      <div class="footer-contact">
+        <p>Poornima College of Engineering,<br> Jaipur, 302022 (Rajasthan)</p>
+        <p>Email: ayurherb@gmail.com</p>
+      </div>
+
+      <div class="footer-tech">
+        <p>Technology Stack Used:</p>
+        <div class="footer-tech-icons">
+          <img src="https://via.placeholder.com/30" alt="React">
+          <img src="https://via.placeholder.com/30" alt="Node.js">
+          <img src="https://via.placeholder.com/30" alt="Database">
+          <img src="https://via.placeholder.com/30" alt="VR">
+          <img src="https://via.placeholder.com/30" alt="CSS">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      &copy; Copyright 2024 AyurHerb - All Rights Reserved. Designed and Developed by Team AyurHerb.
+    </div>
+  </footer>
+</body>
+</html>

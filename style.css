@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d6a4f;
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+    color: #b7e4c7;
+  }
+  
+  .logo-text {
+    margin-left: 5px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #2d6a4f;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #2d6a4f;
+    border-radius: 20px;
+    background-color: #f0fdf4;
+    padding: 5px 10px;
+  }
+  
+  .search-icon {
+    font-size: 1rem;
+    color: #2d6a4f;
+    margin-right: 5px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #2d6a4f;
+    width: 200px;
+  }
+  
+  .search-bar input::placeholder {
+    color: #94a3b8;
+  }
+  

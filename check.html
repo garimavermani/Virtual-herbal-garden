@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      position: sticky;
+      top: 0;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+    .search-bar input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+    section {
+      height: 100vh;
+      padding: 20px;
+    }
+    #home { background-color: #f8d7da; }
+    #health { background-color: #d1ecf1; }
+    #community { background-color: #d4edda; }
+    #dashboard { background-color: #fff3cd; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Ayurherb</div>
+    <div class="search-bar">
+      <label for="search">🔍</label>
+      <input type="text" id="search" placeholder="Search for sections..." />
+    </div>
+  </nav>
+
+  <section id="home">
+    <h1>Home Section</h1>
+    <p>Welcome to the home section.</p>
+  </section>
+  <section id="health">
+    <h1>Health Section</h1>
+    <p>Information about health.</p>
+  </section>
+  <section id="community">
+    <h1>Community Section</h1>
+    <p>Details about the community.</p>
+  </section>
+  <section id="dashboard">
+    <h1>Dashboard Section</h1>
+    <p>Dashboard overview.</p>
+  </section>
+
+  <script>
+    // JavaScript for the search functionality
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        const query = searchInput.value.toLowerCase();
+        const section = document.getElementById(query);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          alert('Section not found!');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

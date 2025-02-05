@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #674747;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 1000;
+      height: 60px;
+    }
+
+    .navbar a {
+      color: rgb(48, 220, 97);
+      text-decoration: none;
+      padding: 10px 20px;   
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #1b9e4f;
+      border-radius: 5px;
+    }
+
+    .content {
+      height: 2000px;
+      padding: 40px;
+      padding-top: 20px;
+      /* display: ; */
+    }
+    p{
+        color: rgb(33, 215, 51);
+    }
+    .box h1
+    {
+        font-size: 48px;
+    }
+    .container{
+        background-color: #ffffff;
+        padding: 60px;
+        display: flex;
+        gap: 60px;
+        z-index: 45;
+        outline: 5px green;
+        border: 2px solid green; 
+        border-radius: 15px;
+    }
+    .btn{
+      background-color: #066c0f;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn:hover{
+        background-color: #40c64f;
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      padding: 45px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    main {
+      flex: 1; /* Pushes the footer to the bottom if the content is short */
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #eaf7ea;
+      color: #1b5e20;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 0.9em;
+    }
+
+    .footer-tech p {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .footer-tech-icons img {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+    }
+
+    .footer-copyright {
+      border-top: 1px solid #c8e6c9;
+      padding-top: 10px;
+      margin-top: 10px;
+      font-size: 0.8em;
+      color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <p>AYURHERB</p>
+    <div class="super">
+        <a href="#">HOME</a>
+        <a href="#">LOGIN</a>
+        <a href="#">HEALTH</a>
+        <a href="#">COMMUNITY</a>
+        <a href="#">DASHBOARD</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="container">
+        <div class="box">
+            <h1 style="color: #066c0f;">Step Into Nature's <br>Pharmacy: Your Virtual<br> Herbal Haven</h1>
+            <br><br><br>
+            <h2>Explore a world of traditional healing with our curated collection of medicinal plants. Unveil the ancient wisdom of AYUSH and embrace the natural way to well-being.</h2>
+            <br><br><br>
+            <button class="btn">EXPLORE MORE</button>
+        </div>
+        <div class="box2">
+            <img height="400px" src="firstpage.png" alt="HERE IS A PICTURE ">
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="cards">
+        <div class="card">
+            <img src="hibiscus.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>HIBISCUS</h3>
+              <p>Hibiscus is a tropical flowering plant known for its vibrant flowers and health benefits.</p>
+            </div>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="rosemary.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>ROSEMARY</h3>
+              <p>Rosemary is a fragrant herb known for its culinary and medicinal uses.</p>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="sage.webp" alt="Card Image">
+            <div class="card-content">
+              <h3>SAGE</h3>
+              <p>Sage is known for its culinary uses and is also used in traditional medicine.</p>
+            </div>
+          </div>
+      
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="lavender.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>LAVENDER</h3>
+              <p>Lavender is a fragrant herb known for its calming properties and use in aromathera</p>
+            </div>
+          </div>
+      
+          <!-- Card 5 -->
+          <div class="card">
+            <img src="aloevera.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>ALOE VERA</h3>
+              <p>Aloe vera is a succulent plant valued for its medicinal properties, especially for skin care, wound healing, and digestion</p>
+            </div>
+          </div>
+      
+          <!-- Card 6 -->
+          <div class="card">
+            <img src="cactus.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>CACTUS</h3>
+              <p>Cactus is known for its ability to survive in harsh, dry environments</p>
+            </div>
+          </div>
+      
+          <!-- Card 7 -->
+          <div class="card">
+            <img src="tulsi.webp" alt="Card Image">
+            <div class="card-content">
+              <h3>TULSI</h3>
+              <p>Tulsi is a sacred herb in Hinduism, known for its medicinal properties and spiritual significance.</p>
+            </div>
+          </div>
+      
+          <!-- Card 8 -->
+          <div class="card">
+            <img src="ashwagandha.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>ASHWAGANDHA</h3>
+              <p>Ashwagandha (Withania somnifera), also known as Indian ginseng or winter cherry, is a highly valued herb in Ayurvedic medicine.</p>
+            </div>
+          </div>
+      
+          <!-- Card 9 -->
+          <div class="card">
+            <img src="dandelion2.webp" alt="Card Image">
+            <div class="card-content">
+              <h3>DANDELION</h3>
+              <p>Dandelion is known for its medicinal properties and is commonly found in meadows.</p>
+            </div>
+          </div>
+      
+          <!-- Card 10 -->
+          <div class="card">
+            <img src="ginger.jpg" alt="Card Image">
+            <div class="card-content">
+              <h3>GINGER</h3>
+              <p>Ginger is a flowering plant widely used for its medicinal properties, particularly in digestion and inflammation.</p>
+            </div>
+          </div>
+      
+          <!-- Card 11 -->
+          <div class="card">
+            <img src="neem.webp" alt="Card Image">
+            <div class="card-content">
+              <h3>NEEM</h3>
+              <p>Neem is a medicinal tree known for its antibacterial and anti-inflammatory properties.</p>
+            </div>
+          </div>
+      
+          <!-- Card 12 -->
+          <div class="card">
+            <img src="eucalyptus.webp" alt="Card Image">
+            <div class="card-content">
+              <h3>EUCALYPTUS  </h3>
+              <p>Eucalyptus is a fast-growing evergreen tree known for its medicinal properties, especially for respiratory health. It is also widely cultivated for timber and essential oils.</p>
+            </div>
+    </div>
+  </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-logo">ayurherb</div>
+    
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Poornima College of Engineering,<br> Jaipur, 302022 (Rajasthan)</p>
+            <p><i class="fas fa-envelope"></i> ayurherb@gmail.com</p>
+          </div>
+    
+          <div class="footer-tech">
+            <p>Technology Stack Used:</p>
+            <div class="footer-tech-icons">
+              <img src="https://via.placeholder.com/30" alt="React">
+              <img src="https://via.placeholder.com/30" alt="Node.js">
+              <img src="https://via.placeholder.com/30" alt="Database">
+              <img src="https://via.placeholder.com/30" alt="VR">
+              <img src="https://via.placeholder.com/30" alt="CSS">
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-copyright">
+          &copy; Copyright 2024 AyurHerb - All Rights Reserved. Designed and Developed by Team AyurHerb.
+        </div>
+      </footer>
+</body>
+</html>
